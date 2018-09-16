@@ -1,3 +1,1 @@
-print("hey" + 24)
-result = float("h")
-print(result)
+p = input("which party are you? ")

@@ -1,3 +1,1 @@
-print("hey")
-result = float("h")
-print(result)
+political_party = input("which party are you? ")
