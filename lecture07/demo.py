@@ -2,15 +2,7 @@
 cm_per_inch = 2.54
 pounds_per_kilo = 2.2
 
-# reads input file
-input_file = open('office.csv', 'r')
-for line in input_file:
-    name, sex, height, age, weight, act_level = line.rstrip().split(',')
-    height = float(height)
-    age = int(age)
-    weight = float(weight)
-    act_level = int(act_level)
-
+def calculate_health(weight, height, age, name, act_level):
     # task 3
     weight_kilos = weight / pounds_per_kilo
     height_cm = height * cm_per_inch
@@ -26,4 +18,18 @@ for line in input_file:
         + "is " + str(female_bmr) + " and your Daily Recommended Intake is " \
         + str(dri_female) + " calories.\n")
 
-input_file.close()
+def main():
+    # reads input file
+    input_file = open('office.csv', 'r')
+    for line in input_file:
+        name, sex, height, age, weight, act_level = line.rstrip().split(',')
+        height = float(height)
+        age = int(age)
+        weight = float(weight)
+        act_level = int(act_level)
+        calculate_health(weight, height, age, name, act_level)
+
+    input_file.close()
+
+if __name__ == "__main__":
+    main()
