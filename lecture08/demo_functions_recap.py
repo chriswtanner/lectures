@@ -9,8 +9,8 @@ def invert_number(number):
     return -1 * number
 
 def main():
-    num1 = int(input("enter any number: "))
-    num2 = int(input("enter another number: "))
+    num1 = int(input("enter any number: ")) # user types '1'
+    num2 = int(input("enter another number: ")) # user types '3'
     num3 = mystery_function(num1, num2)
     print("your mystery number is: " + str(num3))
 
